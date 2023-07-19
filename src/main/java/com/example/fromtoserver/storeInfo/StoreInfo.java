@@ -1,8 +1,8 @@
 package com.example.fromtoserver.storeInfo;
 
 import com.example.fromtoserver.common.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.example.fromtoserver.fromTo.FromTo;
+import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -11,7 +11,10 @@ import java.util.List;
 @NoArgsConstructor
 public class StoreInfo extends BaseEntity {
     @Id
+    @Column(name = "store_info_id")
     private String storeId;
     private double lat;
     private double lng;
+    @OneToMany(mappedBy = "storeInfo", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<FromTo> fromToList;
 }
