@@ -1,6 +1,6 @@
 package com.example.fromtoserver.fromTo.response;
 
-import com.example.fromtoserver.fromTo.FromTo;
+import com.example.fromtoserver.fromTo.domain.FromTo;
 import lombok.Data;
 
 import java.time.DayOfWeek;

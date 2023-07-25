@@ -1,6 +1,6 @@
 package com.example.fromtoserver.storeInfo.repository;
 
-import com.example.fromtoserver.storeInfo.StoreInfo;
+import com.example.fromtoserver.storeInfo.domain.StoreInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

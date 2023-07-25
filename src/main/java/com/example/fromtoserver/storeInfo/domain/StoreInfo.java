@@ -1,7 +1,7 @@
-package com.example.fromtoserver.storeInfo;
+package com.example.fromtoserver.storeInfo.domain;
 
 import com.example.fromtoserver.common.BaseEntity;
-import com.example.fromtoserver.fromTo.FromTo;
+import com.example.fromtoserver.fromTo.domain.FromTo;
 import com.example.fromtoserver.storeInfo.request.StoreInfoSaveRequest;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -27,5 +27,6 @@ public class StoreInfo extends BaseEntity {
         this.lat = storeInfoSaveRequest.getLat();
         this.lng = storeInfoSaveRequest.getLng();
         this.fromToList = storeInfoSaveRequest.getFromToList().stream().map(FromTo::new).collect(Collectors.toList());
+        this.fromToList.forEach(f -> f.setStoreInfo(this));
     }
 }

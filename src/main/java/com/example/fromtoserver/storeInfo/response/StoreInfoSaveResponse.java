@@ -1,7 +1,7 @@
 package com.example.fromtoserver.storeInfo.response;
 
 import com.example.fromtoserver.fromTo.response.FromToSaveResponse;
-import com.example.fromtoserver.storeInfo.StoreInfo;
+import com.example.fromtoserver.storeInfo.domain.StoreInfo;
 import lombok.Data;
 
 import java.util.List;

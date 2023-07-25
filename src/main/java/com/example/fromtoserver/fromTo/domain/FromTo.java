@@ -1,18 +1,19 @@
-package com.example.fromtoserver.fromTo;
+package com.example.fromtoserver.fromTo.domain;
 
 import com.example.fromtoserver.fromTo.request.FromToSaveRequest;
-import com.example.fromtoserver.storeInfo.StoreInfo;
+import com.example.fromtoserver.storeInfo.domain.StoreInfo;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.DayOfWeek;
-import java.time.ZoneId;
 
 @Entity
 @NoArgsConstructor
 @Getter
+@Setter
 public class FromTo {
     @Id
     @GeneratedValue
@@ -27,7 +28,7 @@ public class FromTo {
     private StoreInfo storeInfo;
 
     public FromTo(FromToSaveRequest fromToSaveRequest) {
-        this.dayOfWeek = DayOfWeek.valueOf(fromToSaveRequest.getDayOfWeek());
+        this.dayOfWeek = DayOfWeek.of(fromToSaveRequest.getDayOfWeek());
         this.openTime = fromToSaveRequest.getOpenTime();
         this.closeTime = fromToSaveRequest.getCloseTime();
     }

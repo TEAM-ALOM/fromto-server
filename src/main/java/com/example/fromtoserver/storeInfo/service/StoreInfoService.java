@@ -1,6 +1,6 @@
 package com.example.fromtoserver.storeInfo.service;
 
-import com.example.fromtoserver.storeInfo.StoreInfo;
+import com.example.fromtoserver.storeInfo.domain.StoreInfo;
 import com.example.fromtoserver.storeInfo.repository.StoreInfoRepository;
 import com.example.fromtoserver.storeInfo.request.StoreInfoSaveRequest;
 import lombok.RequiredArgsConstructor;
