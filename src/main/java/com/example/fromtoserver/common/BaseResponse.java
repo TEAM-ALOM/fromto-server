@@ -13,5 +13,7 @@ public class BaseResponse<T> {
         this.result = result;
         this.error = null;
     }
-
+    public static<T> BaseResponse<T> ofSuccess(T result){
+        return new BaseResponse<>(result);
+    }
 }
